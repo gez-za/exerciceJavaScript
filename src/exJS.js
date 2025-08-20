@@ -36,15 +36,14 @@ function daysLeftUntilNextChristmas() {
 //3. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
 
 
-function multiplication(num1, num2) {
-    return num1 * num2;
-}
-function division(num1, num2) {
+const multiplication =(num1, num2) => { return  num1 * num2};
+
+const division = (num1 , num2) =>{
     if (num2 === 0)
         alert("Please enter a number greater than 0");
     else
         return  num1 / num2;
-}
+};
 
 //4. Write a JavaScript program to find the longest string from a given array.
 
