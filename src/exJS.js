@@ -4,7 +4,7 @@
 the user is then prompted to input a guess number. If the user input matches with guess number,
 the program will display a message "Good Work" otherwise display a message "Not matched".*/
 
-function isMatchWithRandomNumber(num){
+const isMatchWithRandomNumber = (num) =>{
     let guess=Math.floor(Math.random() * (10-1)) +1;
     if(num===guess){
         return "Good Work";
@@ -13,11 +13,8 @@ function isMatchWithRandomNumber(num){
     }
 }
 
-/*let num=prompt("Enter your number",null);
-console.log(numberRandomYesOrNo(num));*/
-
 //2. Write a JavaScript program to calculate days left until next Christmas.
-function daysLeftUntilNextChristmas() {
+const daysLeftUntilNextChristmas = () => {
     const dateActuelle = new Date();
     const jour = dateActuelle.getDate();
     let mois = dateActuelle.getMonth() + 1;
@@ -36,19 +33,17 @@ function daysLeftUntilNextChristmas() {
 //3. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
 
 
-const multiplication =(num1, num2) => { return  num1 * num2};
-
-const division = (num1 , num2) =>{
+const multiplicationAndDivision = (num1, num2) => {
     if (num2 === 0)
         alert("Please enter a number greater than 0");
-    else
-        return  num1 / num2;
-};
 
+    return  `${num1 * num2}   ${num1 / num2}`;
+};
+console.log(multiplicationAndDivision(2, 3));
 //4. Write a JavaScript program to find the longest string from a given array.
 
 
-function theLongestStringOfArray(arr) {
+const theLongestStringOfArray= (arr) =>{
     let taille = [];
     for (let i = 0; i < arr.length; i++) {
         let value = " ".concat(arr[i]).length;
@@ -56,11 +51,10 @@ function theLongestStringOfArray(arr) {
     }
     return  Math.max.apply(Math, taille);
 }
-//let arr=["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"]
 
 //5. Write a JavaScript program to get the largest even number from an array of integers.
 
-function largestNumberEven (arr) {
+const largestNumberEven= (arr)=> {
     let arrEven=[]
     for (let i = 0; i < arr.length; i++) {
         if(arr[i] % 2 === 0) {
@@ -72,7 +66,7 @@ function largestNumberEven (arr) {
 
 //6. Write a JavaScript program to remove all characters from a given string that appear more than once.
 
- function removeDuplicateChars(str) {
+const removeDuplicateChars= (str) => {
      for (let i = 0; i < str.length; i++) {
          if (str[i]) {
              str = str.replace(new RegExp(str[i], 'g'), '');
@@ -82,7 +76,7 @@ function largestNumberEven (arr) {
  }
 //7. Write a JavaScript program to compute the sum of cubes of all integer from 1 to a given integer.
 
-function sumOfCubes(num)
+const sumOfCubes= (num)=>
 {
     let sum = 0;
     for (let j = 1; j <= num; j++) {
@@ -95,7 +89,7 @@ function sumOfCubes(num)
 
 
 
-function compareTwoObjects(objet1, objet2) {
+const compareTwoObjects = (objet1, objet2) =>{
     let b = [];
     let c = [];
     for (const objet2Key in objet2) {
@@ -115,7 +109,7 @@ function compareTwoObjects(objet1, objet2) {
 }
 //9. Write a JavaScript program to filter out the specified values from a specified array. Return the original array without the filtered values.
 
-function filterValueArray(arr){
+const filterValueArray = (arr) =>{
     for(let i=0; i<arguments.length; i++) {
         for (let j = 0; j < arr.length; j++) {
             if (arr[j] === arguments[i]) {
@@ -129,7 +123,7 @@ return arr;
 
 //10.Write a JavaScript program to extract out the values at the specified indexes from a specified array.
 
-function filterIndexArray(arr){
+const filterIndexArray = (arr) =>{
     for(let i=0; i<arguments.length; i++) {
         for (let j = 0; j < arr.length; j++) {
             if (j=== arguments[i]) {
@@ -143,7 +137,7 @@ function filterIndexArray(arr){
 
 //11. Write a JavaScript program to delete the rollno property from the following object. Also print the object before or after deleting the property.
 //
-function deleteRollno(student)
+const deleteRollno =(student) =>
 {
     return delete student.rollno;
 }
@@ -171,7 +165,7 @@ let cylindre={
 // "14:37:47"
 
 
-function clock() {
+const clock = () => {
     let time = new Date();
     let hours = time.getHours();
     let minutes = time.getMinutes();
@@ -186,14 +180,14 @@ function clock() {
 }
 //14. Write a JavaScript program to check if a string is lower case or not.
 
-function isToLowerCase(str){
+const isToLowerCase = (str) =>{
     const otherStr=str.toLowerCase();
     return otherStr === str;
 }
 
 
 //15. Write a function called add with two parameters which return a promise containing the result or the error message "Must provide two parameters" in case the user provided only no or only one parameter.
-function add(param1, param2) {
+const add = (param1, param2) => {
     if(arguments.length<2){
        return "Tu dois fournir deux paramètres";
     }else{
@@ -252,7 +246,7 @@ car["model"]="unknown";
 
 //21. Write a function called `calculateArea` that takes the radius of a circle as a parameter. The function should return the area of the circle. If no radius is provided, the function should throw an error with the message "Radius is missing!".
 
-function calculateArea(rayon){
+const calculateArea = (rayon) =>{
     if(arguments.length===0){
         return " Rayon manquant !";
     }else{
@@ -261,7 +255,7 @@ function calculateArea(rayon){
 }
 
 //22. Write a function called `average` that takes any number of arguments (representing scores) and returns the average score. Round the result to two decimal places.
-function average(){
+const average = () =>{
     let sum=0;
     for (let i=0; i<arguments.length; i++){
         sum += arguments[i];
@@ -271,7 +265,7 @@ function average(){
 
 //23. Given an array of strings, use the `map` method to create a new array where each string is reversed.
 
-function reverseString(arr) {
+const reverseString = (arr) => {
     const newArr = arr.map(function (item) {
          item.split('').reverse().join('');
     });
@@ -279,14 +273,14 @@ function reverseString(arr) {
 }
 //24 Given an array of objects representing books (each object has properties `title` and `pages`), use the `filter` method to create a new array containing only the books with more than 300 pages.
 
-function filterBook(book) {
+const filterBook = (book) => {
     book.filter(function (item) {
         return item.page > 300;
     });
 }
 
 //25.  Write a function called `fetchData` that simulates fetching data from an API. It should return a promise that resolves with the string "Data fetched successfully!" after a random delay between 2 to 8 seconds.
-   function fetchData() {
+   const fetchData = () => {
   return new Promise((resolve) => {
     const delay = Math.floor(Math.random() * (8000 - 2000 + 1)) + 2000;
 
@@ -297,7 +291,7 @@ function filterBook(book) {
 }
 
 // Example usage:
-//fetchData().then((message) => console.log(message));
+//fetchData().then((message) => console.log(message));*/
 
 
 
