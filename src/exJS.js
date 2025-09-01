@@ -13,7 +13,7 @@ const isMatchWithRandomNumber = (num) => {
     }
 }
 module.exports = isMatchWithRandomNumber;
-
+/*
 //2. Write a JavaScript program to calculate days left until next Christmas.
 const daysLeftUntilNextChristmas = () => {
     const dateActuelle = new Date();
@@ -148,7 +148,7 @@ name : "David Rayy",
 sclass : "VI",
 rollno : 12 };*/
 //
-const deleteRollno =(student) =>
+/*const deleteRollno =(student) =>
 {
     delete student.rollno;
     return student;
@@ -315,7 +315,7 @@ module.exports=filterBook;
   });
 }
 
-module.exports=fetchData;
+module.exports=fetchData;*/
 // Example usage:
 //fetchData().then((message) => console.log(message));
 
