@@ -6,7 +6,7 @@ test("2 is not match to random number",async ()=>{
     await expect(isMatchWithRandomNumber(2)).toBe("Not matched");
 })
 //3
-/*const multiplicationAndDivision = require('./exJS.js');
+const multiplicationAndDivision = require('./exJS.js');
 test("division and multiplication of 3 and 5 are 0.6 15", () =>{
     expect(multiplicationAndDivision(3,5)).toBe("15  0.6");
 });
@@ -192,7 +192,7 @@ test("filter array and create a new array containing only the books with more th
  const fetchData=require('./exJS.js')
 test("simulates fetching data from an API", async () => {
     expect(await fetchData()).toEqual("Donnees recuperée avec succès!")
-})*/
+})
 
 
 
